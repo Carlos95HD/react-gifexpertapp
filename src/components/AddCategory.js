@@ -12,7 +12,7 @@ export const AddCategory = ( {setCategories} ) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // console.log('Submit')
+    console.log('HandleSubmit', inputValue)
     if ( inputValue.trim().length > 2 ) {
       setCategories( catg => [inputValue,...catg] )
       setInputValue('')
@@ -22,6 +22,7 @@ export const AddCategory = ( {setCategories} ) => {
 
   return (
     <form onSubmit={ handleSubmit }>
+      {/* <p>{inputValue}</p> */}
       <input 
       className='mb-4 mt-2 shadow-lg p-2 font-mono rounded focus:outline-none'
       placeholder='Search'
